@@ -46,11 +46,11 @@ app.post(
       if (session.payment_status === "paid") {
         // TODO: Call your function to save appointment, e.g.
         const appointment = {
-          date: session.metadata.appointment.date,
-          doctor: session.metadata.appointment.doctor,
+          date: session.metadata.date,
+          doctor: session.metadata.doctor,
           userId: session.metadata.userId,
-          status: session.metadata.appointment.status,
-          fee: session.metadata.appointment.fee,
+          status: session.metadata.status,
+          fee: session.metadata.fee,
         };
         await Appointment.create(appointment);
         // createAppointment({ doctorId, userId, appointmentTime });
