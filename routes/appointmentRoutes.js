@@ -23,7 +23,7 @@ route.post(
       event = stripe.webhooks.constructEvent(
         req.body,
         sig,
-        process.env.STRIPE_WEBHOOK_SECRET
+        `${process.env.STRIPE_WEBHOOK_SECRET}`
       );
     } catch (err) {
       console.error("Webhook signature verification failed:", err.message);
@@ -35,14 +35,6 @@ route.post(
       const session = event.data.object;
 
       if (session.payment_status === "paid") {
-        // Get your custom metadata values
-        const { doctorId, userId, appointmentTime } = session.metadata;
-
-        // 🔧 Save to DB or perform actions
-        console.log(`✅ Appointment booked:`);
-        console.log(`Doctor ID: ${doctorId}`);
-        console.log(`User ID: ${userId}`);
-        console.log(`Time: ${appointmentTime}`);
 
         // TODO: Call your function to save appointment, e.g.
         const appointment = {
