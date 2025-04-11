@@ -68,7 +68,7 @@ exports.createAppointment =  catchAsync(async(req, res) => {
 
 exports.getCheckoutSession = catchAsync(async(req,res,next) => {
   const doctor = await Doctor.findById(req.body.doctor);
-
+const feeInPaise = parseInt(req.body.appointment.fee) * 100;
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     mode: "payment",
@@ -76,7 +76,7 @@ exports.getCheckoutSession = catchAsync(async(req,res,next) => {
       {
         price_data: {
           currency: "inr",
-          unit_amount: '300', // amount in paise
+          unit_amount: feeInPaise, // amount in paise
           product_data: {
             name: doctor.name,
             description: doctor.description,
@@ -88,7 +88,11 @@ exports.getCheckoutSession = catchAsync(async(req,res,next) => {
     success_url: `${process.env.FRONTEND_URL}/app/appointments/`,
     cancel_url: `${process.env.FRONTEND_URL}/app/`,
     metadata:{
-      appointment:req.body.appointment,
+      date: req.body.dateTime,
+                          doctor: req.body.doctorId,
+                          userId: req.body.user.userId,
+                          status: "upcoming",
+                          fee: string(feeInPaise),
     }
   });
 
