@@ -90,11 +90,11 @@ const feeInPaise = parseInt(req.body.fee) * 100;
     success_url: `${process.env.FRONTEND_URL}/app/appointment-booked`,
     cancel_url: `${process.env.FRONTEND_URL}/app/`,
     metadata:{
-      date: req.body.dateTime,
-                          doctor: req.body.doctor,
-                          userId: user._id.toString(),
-                          status: "upcoming",
-                          fee: String(feeInPaise),
+      date: req.body.date,
+      doctor: req.body.doctor,
+      userId: user._id.toString(),
+      status: "upcoming",
+      fee: String(feeInPaise),
     }
   });
 
