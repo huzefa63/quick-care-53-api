@@ -1,3 +1,4 @@
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const express = require('express');
 const {getCheckoutSession, getAppointment,cancelAppointment,removeAppointment, createAppointment, checkSlot, getAppointmentById } = require("../controllers/appointmentController");
 const Appointment = require('../models/appointment');
@@ -38,11 +39,11 @@ route.post(
 
         // TODO: Call your function to save appointment, e.g.
         const appointment = {
-          date: session.metadata.appointment.date,
-          doctor: session.metadata.appointment.doctor,
-          userId:session.metadata.userId,
-          status: session.metadata.appointment.status,
-          fee: session.metadata.appointment.fee,
+           date: session.metadata.date,
+      doctor: session.metadata.doctor,
+      userId: session.metadata.userId,
+      status: session.metadata.status,
+      fee: session.metadata.fee,
         };
         await Appointment.create(appointment);
         // createAppointment({ doctorId, userId, appointmentTime });
