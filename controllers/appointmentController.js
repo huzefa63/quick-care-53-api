@@ -106,3 +106,10 @@ exports.removeAppointment = catchAsync(async(req, res) => {
   const appointment = await Appointment.findByIdAndDelete(req.body.id);
   res.status(200).json({isDeleted:true});
 });
+
+exports.deleteAccount = catchAsync(async(req,res) => {
+  const user = await User.findOne({email:req.body.email});
+  await User.deleteOne({email:req.body.user})
+  await Appointment.deleteMany({userId:user._id});
+  res.status(200).json({status:'success'});
+})
