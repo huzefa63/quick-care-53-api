@@ -67,7 +67,7 @@ exports.createAppointment =  catchAsync(async(req, res) => {
 });
 
 exports.getCheckoutSession = catchAsync(async(req,res,next) => {
-  const doctor = await Doctor.findById(req.body.appointment.doctor);
+  const doctor = await Doctor.findById(req.body.doctor);
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
