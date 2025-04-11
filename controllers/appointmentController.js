@@ -73,7 +73,7 @@ const feeInPaise = parseInt(req.body.fee) * 100;
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     mode: "payment",
-    customer_email: userId,
+    customer_email: req.body.userId,
     line_items: [
       {
         price_data: {
