@@ -16,8 +16,6 @@ route.post('/checkout-session',getCheckoutSession);
 
 
 
-    res.status(200).json({ received: true });
-  }
-);
+
 
 module.exports = route;
