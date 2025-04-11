@@ -93,7 +93,7 @@ const feeInPaise = parseInt(req.body.fee) * 100;
                           doctor: req.body.doctorId,
                           userId: user._id,
                           status: "upcoming",
-                          fee: string(feeInPaise),
+                          fee: String(feeInPaise),
     }
   });
 
