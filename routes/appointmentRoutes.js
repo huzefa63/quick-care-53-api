@@ -1,4 +1,3 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const express = require('express');
 const {getCheckoutSession, getAppointment,cancelAppointment,removeAppointment, createAppointment, checkSlot, getAppointmentById } = require("../controllers/appointmentController");
 const Appointment = require('../models/appointment');
