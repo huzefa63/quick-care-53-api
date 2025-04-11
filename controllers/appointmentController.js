@@ -91,7 +91,7 @@ const feeInPaise = parseInt(req.body.fee) * 100;
     metadata:{
       date: req.body.dateTime,
                           doctor: req.body.doctorId,
-                          userId: req.body.user.userId,
+                          userId: user._id,
                           status: "upcoming",
                           fee: string(feeInPaise),
     }
