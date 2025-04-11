@@ -1,5 +1,5 @@
 const express = require('express');
-const {getCheckoutSession, getAppointment,cancelAppointment,removeAppointment, createAppointment, checkSlot, getAppointmentById } = require("../controllers/appointmentController");
+const {getCheckoutSession, deleteAccount ,getAppointment,cancelAppointment,removeAppointment, createAppointment, checkSlot, getAppointmentById } = require("../controllers/appointmentController");
 const Appointment = require('../models/appointment');
 const User = require('../models/user');
 
@@ -12,6 +12,7 @@ route.post('/checkSlot',checkSlot);
 route.post('/getAppointmentById',getAppointmentById);
 route.post('/removeAppointment',removeAppointment);
 route.post('/checkout-session',getCheckoutSession);
+route.post('/deleteAccount',deleteAccount);
 
 
 
