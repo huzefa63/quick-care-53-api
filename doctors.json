@@ -1,0 +1,144 @@
+{
+  "doctors": [
+    {
+      "name": "Dr. John Doe",
+      "speciality": "Cardiologist",
+      "experience": 15,
+      "rating": 4.8,
+      "bio": "Expert in heart-related diseases with over 15 years of experience.",
+      "specialities": ["Heart Surgery", "Cardiac Arrest", "Hypertension"],
+      "location": "New York, USA",
+      "phone": "1234567890",
+      "email": "john.doe@gmail.com",
+      "image": "doctor-1"
+    },
+    {
+      "name": "Dr. Sarah Smith",
+      "speciality": "Dermatologist",
+      "experience": 10,
+      "rating": 4.5,
+      "bio": "Specialist in skin treatments and laser surgeries.",
+      "specialities": ["Acne Treatment", "Laser Surgery", "Skin Allergy"],
+      "location": "Los Angeles, USA",
+      "phone": "2345678901",
+      "email": "sarah.smith@gmail.com",
+      "image": "doctor-2"
+    },
+    {
+      "name": "Dr. Michael Brown",
+      "speciality": "Neurologist",
+      "experience": 12,
+      "rating": 4.7,
+      "bio": "Expert in neurological disorders and treatments.",
+      "specialities": ["Brain Stroke", "Migraine", "Epilepsy"],
+      "location": "Chicago, USA",
+      "phone": "3456789012",
+      "email": "michael.brown@gmail.com",
+      "image": "doctor-3"
+    },
+    {
+      "name": "Dr. Emily Davis",
+      "speciality": "Pediatrician",
+      "experience": 8,
+      "rating": 4.6,
+      "bio": "Caring for children's health and wellness.",
+      "specialities": ["Child Nutrition", "Immunization", "Pediatric Surgery"],
+      "location": "Houston, USA",
+      "phone": "4567890123",
+      "email": "emily.davis@gmail.com",
+      "image": "doctor-4"
+    },
+    {
+      "name": "Dr. William Wilson",
+      "speciality": "Orthopedic Surgeon",
+      "experience": 14,
+      "rating": 4.9,
+      "bio": "Specialist in bone and joint treatments.",
+      "specialities": [
+        "Knee Replacement",
+        "Spinal Surgery",
+        "Fracture Treatment"
+      ],
+      "location": "San Francisco, USA",
+      "phone": "5678901234",
+      "email": "william.wilson@gmail.com",
+      "image": "doctor-5"
+    },
+    {
+      "name": "Dr. Olivia Martinez",
+      "speciality": "Gynecologist",
+      "experience": 11,
+      "rating": 4.7,
+      "bio": "Expert in women's health and pregnancy care.",
+      "specialities": [
+        "Prenatal Care",
+        "Hormonal Therapy",
+        "Menstrual Disorders"
+      ],
+      "location": "Miami, USA",
+      "phone": "6789012345",
+      "email": "olivia.martinez@gmail.com",
+      "image": "doctor-6"
+    },
+    {
+      "name": "Dr. James Anderson",
+      "speciality": "Ophthalmologist",
+      "experience": 9,
+      "rating": 4.6,
+      "bio": "Specialist in eye surgeries and vision correction.",
+      "specialities": ["LASIK Surgery", "Cataract Treatment", "Retina Surgery"],
+      "location": "Seattle, USA",
+      "phone": "7890123456",
+      "email": "james.anderson@gmail.com",
+      "image": "doctor-7"
+    },
+    {
+      "name": "Dr. Sophia Taylor",
+      "speciality": "Psychiatrist",
+      "experience": 13,
+      "rating": 4.8,
+      "bio": "Helping patients with mental health conditions.",
+      "specialities": [
+        "Anxiety Therapy",
+        "Depression Counseling",
+        "PTSD Treatment"
+      ],
+      "location": "Boston, USA",
+      "phone": "8901234567",
+      "email": "sophia.taylor@gmail.com",
+      "image": "doctor-8"
+    },
+    {
+      "name": "Dr. Benjamin Lee",
+      "speciality": "ENT Specialist",
+      "experience": 10,
+      "rating": 4.7,
+      "bio": "Expert in ear, nose, and throat disorders.",
+      "specialities": [
+        "Sinus Surgery",
+        "Hearing Loss Treatment",
+        "Tonsillectomy"
+      ],
+      "location": "Austin, USA",
+      "phone": "9012345678",
+      "email": "benjamin.lee@gmail.com",
+      "image": "doctor-9"
+    },
+    {
+      "name": "Dr. Ava Thomas",
+      "speciality": "General Physician",
+      "experience": 7,
+      "rating": 4.5,
+      "bio": "Providing primary healthcare and medical consultation.",
+      "specialities": [
+        "General Checkups",
+        "Fever Treatment",
+        "Diabetes Management"
+      ],
+      "location": "Denver, USA",
+      "phone": "0123456789",
+      "email": "ava.thomas@gmail.com",
+      "image": "doctor-10"
+    }
+  ]
+}
