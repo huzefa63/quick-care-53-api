@@ -1,4 +1,4 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(`${process.env.STRIPE_SECRET_KEY}`);
 const catchAsync = require("../utils/catchAsync");
 const User = require('../models/user');
 const Doctor = require('../models/doctor');
