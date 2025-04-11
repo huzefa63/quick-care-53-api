@@ -87,7 +87,7 @@ const feeInPaise = parseInt(req.body.fee) * 100;
         quantity: 1,
       },
     ],
-    success_url: `${process.env.FRONTEND_URL}/app/appointments/`,
+    success_url: `${process.env.FRONTEND_URL}/app/appointments/appointment-booked`,
     cancel_url: `${process.env.FRONTEND_URL}/app/`,
     metadata:{
       date: req.body.dateTime,
