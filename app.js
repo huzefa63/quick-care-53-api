@@ -6,6 +6,8 @@ const userRoute = require('./routes/userRoutes');
 const dotenv = require('dotenv');
 const cors = require('cors');
 dotenv.config('.env');
+const Appointment = require('./models/appointment');
+
 app.use(express.urlencoded({extended:true}));
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
