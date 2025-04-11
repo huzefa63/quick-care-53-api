@@ -67,8 +67,7 @@ exports.createAppointment =  catchAsync(async(req, res) => {
 });
 
 exports.getCheckoutSession = catchAsync(async(req,res,next) => {
-  const user = await User.findOne({email:req.body.email});
-  const doctor = await Doctor.findById(req.body.doctor);
+  const doctor = await Doctor.findById(req.body.appointment.doctor);
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
@@ -86,7 +85,7 @@ exports.getCheckoutSession = catchAsync(async(req,res,next) => {
         quantity: 1,
       },
     ],
-    success_url: `${process.env.FRONTEND_URL}/app/appointments/${session.id}`,
+    success_url: `${process.env.FRONTEND_URL}/app/appointments/`,
     cancel_url: `${process.env.FRONTEND_URL}/app/`,
     metadata:{
       appointment:req.body.appointment,
