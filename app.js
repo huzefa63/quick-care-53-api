@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 dotenv.config('.env');
 app.use(express.urlencoded({extended:true}));
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 app.use(
   cors({
     origin: "https://quick-care-53.vercel.app",
