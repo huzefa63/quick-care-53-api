@@ -23,6 +23,11 @@ app.use(
 app.options("*", cors());
 
 
+app.get('/', (req, res) => {
+  res.send('🟢 Backend is alive! ✅');
+});
+
+
 app.post(
   "/appointments/webhook",
   express.raw({ type: "application/json" }),
