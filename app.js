@@ -24,6 +24,7 @@ app.options("*", cors());
 
 
 app.get('/', (req, res) => {
+  console.log('uptime robot req came');
   res.send('🟢 Backend is alive! ✅');
 });
 
